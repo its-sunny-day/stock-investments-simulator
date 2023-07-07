@@ -67,8 +67,9 @@ def simulatePeriod(startYear, numberOfYears, investmentPerMonth, dataIterator, a
             dataItem = next(dataIterator)
 
     print("Period: %s --> %s (%d years)" % (startDate, itemDate, numberOfYears))
-    print("Number of %s in portfolio: %.2f" % (assetName, assetsInPortfolio))
+    print("Investment per month: %s$" % (investmentPerMonth))
     print("Money spent: %d$" % moneySpent)
+    print("Number of %s in portfolio (at the end of simulation period): %.2f" % (assetName, assetsInPortfolio))
     print("Cost of one %s (at the end of simulation period): %d$" % (assetName, costOfAsset))
     currentCostOfPortfolio = round(assetsInPortfolio * costOfAsset)
     print("Cost of portfolio (at the end of simulation period): %d$" % currentCostOfPortfolio)
@@ -82,7 +83,7 @@ def simulatePeriod(startYear, numberOfYears, investmentPerMonth, dataIterator, a
 numberOfYears = 10
 #print("Enter start year:")
 #startYear=int(input())
-startYear = 1969
+startYear = 1989
 
 #print("How much you would like to invest each month,$:")
 #investmentPerMonth=int(input())
@@ -99,4 +100,4 @@ print("")
 print("--------------------------------------")
 print("Gold:")
 print("--------------------------------------")
-simulatePeriod(startYear, numberOfYears, investmentPerMonth, getGoldIterator(), "Gold(gramm)")
+simulatePeriod(startYear, numberOfYears, investmentPerMonth, getGoldIterator(), "Gold(troy ounces, oz)")
