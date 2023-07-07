@@ -1,7 +1,10 @@
-pip install datapackage
 
-Simulate profitability of investment in SP500 stocks or Gold based on historical data.
+### Stock investments simulator
 
-Example of Simulation:
+Based on historical data, calculate the profitability of investment in SP500 stocks or Gold.
 
-![Example of Simulation](https://github.com/ioakimov/stock-investments-simulator/blob/master/images/example_of_simulation.png?raw=true)
+`pip install datapackage`
+
+#### Example of Simulation:
+
+![Example of simulation](https://github.com/ioakimov/stock-investments-simulator/blob/master/images/example_of_simulation.png?raw=true)
