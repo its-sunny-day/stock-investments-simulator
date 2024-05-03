@@ -29,8 +29,8 @@ def iterateTillDate(resourceIter, targetDate):
     for line in resourceIter:          
         #Date field has index 0
         date = line[0]
-        #Convert 'yearmonth'(named tuple) to date, if needed
-        if type(date).__name__ == "yearmonth":
+        #Convert '_yearmonth'(named tuple) to date, if needed
+        if type(date).__name__.endswith("yearmonth"):
             date = datetime.date(date.year, date.month, 1)            
         if targetDate == date:
             return line    
@@ -51,8 +51,8 @@ def simulatePeriod(startYear, numberOfYears, investmentPerMonth, dataIterator, a
         for month in range (1, 12 + 1):    
             expectedDate = datetime.date(simulationYear, month, 1)
             itemDate = dataItem[0]
-            #Convert 'yearmonth'(named tuple) to date, if needed
-            if type(itemDate).__name__ == "yearmonth":
+            #Convert '_yearmonth'(named tuple) to date, if needed
+            if type(itemDate).__name__.endswith("yearmonth"):
                 itemDate = datetime.date(itemDate.year, itemDate.month, 1)  
             if expectedDate != itemDate:
                 print("Error: Expected date %s, but %s found..." % (expectedDate, itemDate))
